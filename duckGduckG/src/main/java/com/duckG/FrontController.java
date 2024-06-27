@@ -11,6 +11,8 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.duckG.main.MainControl;
 import com.duckG.member.controller.LoginForm;
+import com.duckG.member.controller.MyPage;
+import com.duckG.member.controller.Mymemberpage;
 import com.duckG.product.web.productForm;
 
 // front -> 요청url(*.do) - 실행컨트롤 매칭
@@ -34,6 +36,10 @@ public class FrontController extends HttpServlet {
 		
 		//제품별상세페이지
 		map.put("/productForm.do", new productForm());
+		
+		//마이페이지
+		map.put("/MyPage.do", new MyPage());
+		map.put("/Mymemberpage.do", new Mymemberpage());
 	}
 	
 	@Override
